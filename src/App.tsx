@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Movies from "./pages/Movies";
+import TVShows from "./pages/TVShows";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Sonner />
           <Routes>
             <Route path="/movies" element={<Movies />} />
+            <Route path="/tv-shows" element={<TVShows />} />
             <Route path="/" element={<Movies />} />
           </Routes>
         </div>
