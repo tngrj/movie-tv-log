@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { StarRating } from "@/components/StarRating";
+import StarRating from "@/components/StarRating";
 import {
   Sidebar,
   SidebarContent,
