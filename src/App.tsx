@@ -14,8 +14,8 @@ const App = () => (
     <TooltipProvider>
       <SidebarProvider>
         <BrowserRouter>
-          <div className="min-h-screen bg-[#1A1F2C] w-full">
-            <nav className="bg-card p-4">
+          <div className="min-h-screen bg-[#1A1F2C] w-full flex flex-col">
+            <nav className="bg-card p-4 relative z-50">
               <div className="container flex gap-4">
                 <Link to="/movies" className="text-white hover:text-primary">
                   Movies
@@ -25,13 +25,15 @@ const App = () => (
                 </Link>
               </div>
             </nav>
-            <Toaster />
-            <Sonner />
-            <Routes>
-              <Route path="/movies" element={<Movies />} />
-              <Route path="/tv-shows" element={<TVShows />} />
-              <Route path="/" element={<Movies />} />
-            </Routes>
+            <div className="flex-1 relative">
+              <Toaster />
+              <Sonner />
+              <Routes>
+                <Route path="/movies" element={<Movies />} />
+                <Route path="/tv-shows" element={<TVShows />} />
+                <Route path="/" element={<Movies />} />
+              </Routes>
+            </div>
           </div>
         </BrowserRouter>
       </SidebarProvider>
